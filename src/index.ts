@@ -28,6 +28,8 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 
 app.use(cors(corsOptions));
 
+app.use();
+
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "..", "frontend")));
@@ -41,6 +43,8 @@ app.get("/", (req: Request, res: Response) => {
 app.get("/cat", (req: Request, res: Response) => {
   res.status(200).sendFile(path.join(__dirname, "..", "frontend", "cat.html"));
 });
+
+// app.use("/employees", require("../routes/employees"));
 
 app.use((req: Request, res: Response) => {
   res.status(404).sendFile(path.join(__dirname, "..", "frontend", "404.html"));
