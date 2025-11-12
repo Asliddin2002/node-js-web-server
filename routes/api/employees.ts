@@ -8,7 +8,7 @@ router
   .route("/")
   .get(controllers.employeesGet)
   .post(controllers.employeeCreate)
-  .put((req: Request, res: Response) => {})
-  .delete((req: Request, res: Response) => {});
+  .put(controllers.employeeUpdate)
+  .delete(controllers.employeeUpdate);
 
 module.exports = router;
