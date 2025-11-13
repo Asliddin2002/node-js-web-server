@@ -21,6 +21,8 @@ app.use("/", require("../routes/home"));
 
 app.use("/cat", require("../routes/cat"));
 
+app.use("/register", require("../routes/register"));
+
 // apis
 app.use("/employees", require("../routes/api/employees"));
 

@@ -3,3 +3,8 @@ export interface Employees {
   fullName: string;
   age: number;
 }
+
+export interface User {
+  userName: string;
+  password: string;
+}
