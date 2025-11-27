@@ -3,21 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cat</title>
     <link rel="stylesheet" href="public/css/style.css" />
   </head>
   <body>
-    <section id="cat-section">
-      <h1>This is a Cat</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut
-        asperiores qui voluptatum eum sint debitis, dicta iste quidem, quasi
-        expedita nobis vitae cumque, reprehenderit amet magni doloremque!
-        Repudiandae, culpa. Nam eum quibusdam minus id, earum distinctio
-        veritatis, autem incidunt aperiam velit, vitae dolor laboriosam magni
-        suscipit corrupti architecto. Officiis.
-      </p>
-      <img src="public/images/cat.avif" alt="Cat image" />
-    </section>
+    <main class="container">
+      <section id="cat-section">
+        <h1 class="title">🐱 My name is Asliddin</h1>
+
+        <p class="about-me">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut
+          asperiores qui voluptatum eum sint debitis...
+        </p>
+
+        <div class="cat-wrapper">
+          <img class="cat-img" src="/public/images/cat.avif" alt="Cat image" />
+        </div>
+
+        <button id="meow-btn" class="btn">Press for Meow 😼</button>
+
+        <p id="meow-text" class="hidden">"Meeoooww! 😺"</p>
+      </section>
+    </main>
+
+    <script>
+      const btn = document.getElementById("meow-btn");
+      const text = document.getElementById("meow-text");
+
+      btn.addEventListener("click", () => {
+        text.classList.toggle("hidden");
+        text.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>
